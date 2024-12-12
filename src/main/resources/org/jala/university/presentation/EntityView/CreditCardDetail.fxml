@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="cardDetailsContainer" prefHeight="124.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jala.university.presentation.controller.CreateEntityController.CreditCardDetailsController">
+    <Pane fx:id="paneCreditCard" prefHeight="162.0" prefWidth="385.0" />
+    <Pane layoutX="400.0" prefHeight="162.0" prefWidth="280.0">
+        <children>
+            <Label layoutX="16.0" layoutY="14.0" text="Your new credit card details:" />
+            <Label fx:id="cardTypeLabel" layoutX="22.0" layoutY="53.0" text="Card Type: " />
+            <Label fx:id="creditLimitLabel" layoutX="22.0" layoutY="81.0" text="Credit Limit: " />
+            <Label fx:id="statusLabel" layoutX="22.0" layoutY="108.0" text="Status: " />
+            <Button layoutX="172.0" layoutY="126.0" onAction="#updateLimit" text="Modify Limit" />
+        </children>
+    </Pane>
+</AnchorPane>

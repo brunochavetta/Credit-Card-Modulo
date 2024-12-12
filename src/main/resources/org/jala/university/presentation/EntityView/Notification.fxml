@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="64.0" prefWidth="522.0" style="-fx-background-color: transparent;" stylesheets="@/styles/styles.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jala.university.presentation.controller.CreateEntityController.NotificationController">
+    <children>
+        <Pane layoutX="339.0" layoutY="5.0" prefHeight="55.0" prefWidth="79.0">
+            <children>
+                <Text fx:id="notificationLabelButton" layoutX="15.0" layoutY="44.0" text="Notification" textAlignment="CENTER">
+                    <font>
+                        <Font size="9.0" />
+                    </font>
+                </Text>
+                <ToggleButton fx:id="notificationsToggleButton" layoutX="24.0" layoutY="8.0" text="🛇" textFill="RED" />
+            </children>
+        </Pane>
+        <Text fx:id="numberOfUnreadNotifications" fill="RED" layoutX="505.0" layoutY="17.0" text="0" textAlignment="CENTER" visible="false">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <MenuButton fx:id="notificationMenuButton" layoutX="418.0" layoutY="5.0" prefHeight="55.0" prefWidth="79.0" styleClass="toggleButton" text="🕭" textAlignment="CENTER" textFill="WHITE" visible="false">
+            <items>
+                <CustomMenuItem fx:id="notificationsScrollItem">
+                    <content>
+                        <ScrollPane fx:id="notificationsScrollPane" fitToHeight="true" fitToWidth="true" maxHeight="200.0" prefHeight="200.0">
+                            <content>
+                                <VBox fx:id="notificationsVBox" spacing="5.0">
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </CustomMenuItem>
+            </items>
+         <font>
+            <Font size="15.0" />
+         </font>
+        </MenuButton>
+    </children>
+</AnchorPane>

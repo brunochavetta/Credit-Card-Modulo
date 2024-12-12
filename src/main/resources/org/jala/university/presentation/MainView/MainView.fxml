@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="466.0" prefWidth="707.0" stylesheets="@/styles/styles.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jala.university.presentation.controller.MainViewControllerCreditCard.MainController">
+    <Pane layoutX="-5.0" layoutY="-1.0" prefHeight="466.0" prefWidth="194.0" styleClass="pane-left">
+        <children>
+            <Button fx:id="requestCardButton" layoutX="30.0" layoutY="85.0" styleClass="button" text="Request Card" />
+            <Button fx:id="viewApplicationsButton" layoutX="15.0" layoutY="153.0" styleClass="button" text="View Applications" />
+            <Button fx:id="viewCreditCardByUser" layoutX="21.0" layoutY="225.0" styleClass="button" text="My Credit Cards" />
+            <Button fx:id="viewDebtsByUser" layoutX="48.0" layoutY="297.0" styleClass="button" text="My Debts" />
+            <Button fx:id="viewTransactionSimulation" layoutX="48.0" layoutY="297.0" styleClass="button" text="Transaction Simulation" />
+            <Text fx:id="menuText" layoutX="83.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" />
+        </children>
+    </Pane>
+
+    <Pane layoutX="188.0" prefHeight="64.0" prefWidth="522.0" styleClass="pane-top">
+        <children>
+            <Text layoutX="25.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Jala University Bank" />
+            <fx:include source="../EntityView/Notification.fxml">
+
+            </fx:include>
+        </children>
+    </Pane>
+</AnchorPane>

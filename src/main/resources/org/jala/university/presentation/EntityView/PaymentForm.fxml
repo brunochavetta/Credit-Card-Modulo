@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="466.0" prefWidth="707.0" stylesheets="@/styles/styles.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jala.university.presentation.controller.CreateEntityController.CreditCardPaymentController">
+    <Pane layoutX="-5.0" layoutY="-1.0" prefHeight="466.0" prefWidth="194.0" styleClass="pane-left">
+        <children>
+            <Button fx:id="requestCardButton" layoutX="30.0" layoutY="109.0" styleClass="button" text="Request Card" />
+            <Button fx:id="viewApplicationsButton" layoutX="15.0" layoutY="181.0" styleClass="button" text="View Applications" />
+            <Button fx:id="viewCreditCardByUser" layoutX="20.0" layoutY="254.0" styleClass="button" text="My Credit Cards" />
+            <Text layoutX="78.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" />
+            <Button fx:id="homeButton" layoutX="106.0" layoutY="8.0" text="Home" />
+            <Button fx:id="viewDebtsByUser" layoutX="53.0" layoutY="326.0" styleClass="button" text="My Debts" />
+        </children>
+    </Pane>
+    <Pane layoutX="188.0" prefHeight="64.0" prefWidth="522.0" styleClass="pane-top">
+        <children>
+            <Text layoutX="39.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Jala University Bank" />
+            <fx:include source="Notification.fxml">
+            </fx:include>
+        </children>
+    </Pane>
+    <Pane layoutX="201.0" layoutY="139.0" prefHeight="306.0" prefWidth="484.0">
+        <children>
+            <VBox alignment="CENTER" layoutY="38.0" prefHeight="213.0" prefWidth="481.0" spacing="10" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                <Label text="Select the amount to pay" />
+
+                <ComboBox fx:id="paymentOption" prefWidth="200.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Minimum Payment" />
+                            <String fx:value="Total Payment" />
+                            <String fx:value="Custom Payment" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <TextField fx:id="amountField" prefWidth="200.0" promptText="Amount to pay" visible="false" />
+
+                <Button fx:id="sendPayment" text="Pay" />
+            </VBox>
+        </children>
+    </Pane>
+    <Pane layoutX="188.0" layoutY="61.0" prefHeight="64.0" prefWidth="510.0">
+        <children>
+            <Label fx:id="monthAndYear" layoutX="69.0" layoutY="5.0" text="month and year" />
+            <Text fx:id="totalDebt" fill="RED" layoutX="342.0" layoutY="39.0" text="value">
+                <font>
+                   <Font size="19.0" />
+                </font>
+             </Text>
+        </children>
+    </Pane>
+</AnchorPane>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="611.0" prefWidth="724.0" stylesheets="@/styles/styles.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jala.university.presentation.controller.CreateEntityController.CreditCardApplicationFormController">
+    <children>
+        <Pane layoutX="-5.0" layoutY="-1.0" prefHeight="555.0" prefWidth="194.0" styleClass="pane-left">
+            <children>
+                <Button fx:id="viewApplicationsButton" layoutX="15.0" layoutY="127.0" styleClass="button" text="View Applications" />
+                <Button fx:id="viewCreditCardByUser" layoutX="22.0" layoutY="199.0" styleClass="button" text="My Credit Cards" />
+                <Text layoutX="78.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" />
+                <Button fx:id="homeButton" layoutX="106.0" layoutY="8.0" text="Home" />
+            </children>
+        </Pane>
+
+        <Pane layoutX="188.0" prefHeight="66.0" prefWidth="530.0" styleClass="pane-top">
+            <children>
+                <Text layoutX="39.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Jala University Bank" />
+                <fx:include source="Notification.fxml">
+                </fx:include>
+            </children>
+        </Pane>
+
+        <Pane layoutX="188.0" layoutY="70.0" prefHeight="54.0" prefWidth="530.0">
+            <children>
+                <Button fx:id="finishButton" layoutX="0" layoutY="0" prefHeight="44.0" prefWidth="125.0" text="Finish" visible="false" />
+                <Button fx:id="cancelButton" layoutX="140.0" layoutY="0" prefHeight="44.0" prefWidth="125.0" text="Cancel" visible="false" />
+            </children>
+        </Pane>
+
+        <ScrollPane layoutX="194.0" layoutY="130.0" prefHeight="665.0" prefWidth="530.0">
+            <content>
+                <GridPane fx:id="grid" hgap="10" prefWidth="500.0" vgap="8">
+                    <Label text="Creation Date:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="creationDateField" editable="false" prefHeight="26.0" prefWidth="298.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label text="User:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="userNameField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label fx:id="messageLabel" text="Credit card application for" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+
+                    <Button fx:id="requestPlatinumButton" text="Request Platinum Card" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Button fx:id="continueButton" text="Continue" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <Label text="Company ID:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                    <TextField fx:id="businessIdField" promptText="Company ID" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                    <ComboBox fx:id="countryComboBox" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Argentina" />
+                                <String fx:value="Bolivia" />
+                                <String fx:value="Colombia" />
+                                <String fx:value="EEUU" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+
+                    <Label text="Company Name:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                    <TextField fx:id="companyNameField" promptText="Company Name" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                    <Label prefHeight="55.0" prefWidth="217.0" text="Document Type:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                    <ComboBox fx:id="documentTypeComboBox" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Front ID" />
+                                <String fx:value="Back ID" />
+                                <String fx:value="Salary Bonus" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+
+                    <Button fx:id="addDocumentButton" text="Choose Document" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                    <TableView fx:id="documentsTable" visible="false" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+
+                    <columnConstraints>
+                        <ColumnConstraints maxWidth="342.0" minWidth="186.0" prefWidth="236.0" />
+                        <ColumnConstraints maxWidth="511.0" minWidth="229.0" prefWidth="305.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="49.0" minHeight="28.0" prefHeight="28.0" />
+                        <RowConstraints maxHeight="82.0" minHeight="28.0" prefHeight="28.0" />
+                        <RowConstraints maxHeight="88.0" minHeight="27.0" prefHeight="27.0" />
+                        <RowConstraints maxHeight="78.0" minHeight="51.0" prefHeight="78.0" />
+                        <RowConstraints />
+                        <RowConstraints maxHeight="49.0" minHeight="30.0" prefHeight="30.0" />
+                        <RowConstraints maxHeight="80.0" minHeight="23.0" prefHeight="34.0" />
+                        <RowConstraints maxHeight="93.0" minHeight="30.0" prefHeight="30.0" />
+                        <RowConstraints maxHeight="208.0" minHeight="6.0" prefHeight="80.0" />
+                        <RowConstraints maxHeight="401.0" minHeight="158.0" prefHeight="158.0" />
+                        <RowConstraints maxHeight="156.0" minHeight="50.0" prefHeight="156.0" />
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="true" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="17" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="MAIN_CLASS_NAME" value="org.jala.university.presentation.MainAppCreditCard" />
+    <module name="credit-card-management" />
+    <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Descargas/openjfx-23.0.1/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

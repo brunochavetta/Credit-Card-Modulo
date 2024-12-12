@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="171.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jala.university.presentation.controller.CreateEntityController.NotificationConfigController">
+    <children>
+        <Label layoutX="20.0" layoutY="20.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Notification Preferences Configuration" />
+
+        <VBox layoutX="22.0" layoutY="49.0" prefHeight="167.0" prefWidth="380.0" spacing="10.0">
+            <children>
+                <Label style="-fx-font-weight: bold;" text="Notification Types" />
+
+                <HBox spacing="10.0">
+                    <Label fx:id="transactionNotification" text="Transaction Notifications" />
+                    <CheckBox fx:id="transactionMailCheckBox" text="By Mail" />
+                    <CheckBox fx:id="transactionAppCheckBox" text="In App" />
+                </HBox>
+
+                <HBox spacing="10.0">
+                    <Label fx:id="successfulPaymentNotification" text="Payment Notifications" />
+                    <CheckBox fx:id="successfulPaymentMailCheckBox" text="By Mail" />
+                    <CheckBox fx:id="successfulPaymentAppCheckBox" text="In App" />
+                </HBox>
+
+                <HBox prefHeight="18.0" prefWidth="374.0" spacing="10.0">
+                    <Label fx:id="LimitExceedNotification" text="Limit Exceeded" />
+                    <CheckBox fx:id="LimitExceedMailCheckBox" text="By Mail" />
+                    <CheckBox fx:id="LimitExceedAppCheckBox" prefHeight="18.0" prefWidth="95.0" text="In App" />
+                </HBox>
+
+                <Button onAction="#saveNotificationSettings" text="Save Configuration" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="cardDebtContainer" prefHeight="57.0" prefWidth="522.0" stylesheets="@/styles/styles.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jala.university.presentation.controller.CreateEntityController.CreditCardDebtController">
+    <Pane prefHeight="70.0" prefWidth="528.0">
+        <children>
+            <Label fx:id="debtName" layoutX="14.0" layoutY="15.0" text="nameDebt" />
+            <Text fx:id="totalAmount" layoutX="240.0" layoutY="49.0" text="200" wrappingWidth="47.30799865722656">
+            <font>
+               <Font size="19.0" />
+            </font></Text>
+            <Button fx:id="paymentButton" layoutX="413.0" layoutY="20.0" text="pay debt" />
+            <Button fx:id="generateReportDebtButton" layoutX="306.0" layoutY="20.0" text="Resume" />
+        </children>
+    </Pane>
+</AnchorPane>

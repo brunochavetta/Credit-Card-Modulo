@@ -1,0 +1,57 @@
+.root {
+    -fx-background-color: #ffffff;
+}
+
+.pane-left {
+    -fx-background-color: rgb(143, 169, 197);
+    -fx-padding: 10;
+}
+
+.pane-top {
+    -fx-background-color: rgb(121, 141, 170);
+    -fx-padding: 10;
+}
+
+.notificationLabelButton {
+
+}
+
+.toggleButton {
+    -fx-background-color: rgb(143, 169, 197);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 10;
+    -fx-background-radius: 4;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.0, 0, 1);
+    -fx-cursor: hand;
+}
+
+.button {
+    -fx-background-color: rgb(143, 169, 197);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 12 20;
+    -fx-background-radius: 4;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.0, 0, 1);
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: rgb(121, 141, 170);
+}
+
+.label {
+    -fx-font-size: 24px;
+    -fx-text-fill: rgb(121, 141, 170);
+    -fx-padding: 10;
+    -fx-color: #ffffff;
+}
+
+.menu {
+    -fx-font-size: 15px;
+    -fx-text-fill: rgb(121, 141, 170);
+    -fx-padding: 10;
+    -fx-color: #ffffff;
+}
